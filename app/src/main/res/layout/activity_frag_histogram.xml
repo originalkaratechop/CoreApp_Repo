@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewActivity">
+
+    <LinearLayout
+        android:id="@+id/view_root_logs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/view_root_hist"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".ViewActivity">
+
+        <ImageView
+            android:id="@+id/hist_img"
+            android:layout_width="155dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_test"
+            tools:text="image hist" />
+
+        <View
+            android:layout_width="@dimen/xl"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/hist_log"
+            android:layout_width="155dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/xl"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:text="strange hist">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/view_root_hist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:context=".ViewActivity">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="2px"
+            android:background="@color/colorPrimaryDark" />
+
+        <LinearLayout
+            android:id="@+id/lo_hist_variables"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/hist_variables"
+                android:layout_width="257dp"
+                android:layout_height="120dp"
+                android:background="@color/colorAccent"
+                android:orientation="vertical"
+                tools:text="strange hist">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hist_var_updated"
+                android:layout_width="257dp"
+                android:layout_height="120dp"
+                android:background="@color/colorAccent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:text="strange hist">
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:rotation="90"
+                android:text="@string/hist_l" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lo_l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.jaygoo.widget.RangeSeekBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/seekBarL"
+                android:layout_width="275dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="14dp"
+                app:rsb_max="100"
+                app:rsb_min="0"
+                app:rsb_mode="range"
+                app:rsb_progress_color="@color/seekerL"
+                app:rsb_range_interval="0"
+                app:rsb_thumb_size="20dp" />
+
+            <TextView
+                android:id="@+id/seekTxtL"
+                android:layout_width="52dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lo_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.jaygoo.widget.RangeSeekBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/seekBarA"
+                android:layout_width="275dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="14dp"
+                app:rsb_max="186"
+                app:rsb_min="0"
+                app:rsb_mode="range"
+                app:rsb_progress_color="@android:color/black"
+                app:rsb_range_interval="0"
+                app:rsb_thumb_size="20dp" />
+
+            <TextView
+                android:id="@+id/seekTxtA"
+                android:layout_width="52dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lo_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.jaygoo.widget.RangeSeekBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/seekBarB"
+                android:layout_width="275dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="14dp"
+                app:rsb_max="203"
+                app:rsb_min="0"
+                app:rsb_mode="range"
+                app:rsb_progress_color="@android:color/darker_gray"
+                app:rsb_range_interval="0"
+                app:rsb_thumb_size="20dp" />
+
+            <TextView
+                android:id="@+id/seekTxtB"
+                android:layout_width="52dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lo_de"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.jaygoo.widget.RangeSeekBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/seekBarDE"
+                android:layout_width="275dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="14dp"
+                app:rsb_max="120"
+                app:rsb_min="0"
+                app:rsb_mode="range"
+                app:rsb_progress_color="@android:color/holo_blue_dark"
+                app:rsb_range_interval="0"
+                app:rsb_thumb_size="20dp" />
+
+            <TextView
+                android:id="@+id/seekTxtDE"
+                android:layout_width="52dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lo_separator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/lo_hist_comp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/hist_comp"
+                android:layout_width="257dp"
+                android:layout_height="120dp"
+                android:background="@color/colorAccent"
+                android:orientation="vertical"
+                tools:text="color hist">
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:rotation="90"
+                android:text="@string/hist_rgb" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/progressTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view_load"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/hist_fab"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="4dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_autorenew"
+        android:tint="@android:color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/switchers_container"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/switchers_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/switchUpd_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="@string/hist_switch_upd" />
+
+        <Switch
+            android:id="@+id/switchUpd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:checked="false"
+            android:scaleX="1.1"
+            android:scaleY="1.1" />
+
+        <TextView
+            android:id="@+id/switchCut_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="@string/hist_switch_cut" />
+
+        <Switch
+            android:id="@+id/switchCut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:checked="false"
+            android:scaleX="1.1"
+            android:scaleY="1.1" />
+
+        <TextView
+            android:id="@+id/switchComp_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="@string/hist_switch_comp" />
+
+        <Switch
+            android:id="@+id/switchComp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:checked="false"
+            android:scaleX="1.1"
+            android:scaleY="1.1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView
+            android:id="@+id/checkDE_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="@string/hist_check_de" />
+
+        <CheckBox
+            android:id="@+id/checkDE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_marginBottom="8dp"/>
+
+        <ImageView
+            android:id="@+id/btn_Redraw_on"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="12dp"
+            android:background="@color/colorAccent"
+            android:scaleType="center"
+            android:tint="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/btn_hide"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@android:color/darker_gray"
+            android:scaleType="center"
+            android:tint="@color/colorAccent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/view_root_redraw"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".ViewActivity">
+
+        <LinearLayout
+            android:id="@+id/hist_redraw_filt1"
+            android:layout_width="135dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            tools:text="strange hist" />
+
+        <ImageView
+            android:id="@+id/btn_Redraw_off"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@color/colorAccent"
+            android:scaleType="center"
+            android:tint="@android:color/white" />
+
+        <LinearLayout
+            android:id="@+id/hist_redraw_filt2"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/black"
+            android:orientation="horizontal"
+            tools:text="strange hist">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hist_redraw_filt3"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/black"
+            android:orientation="horizontal"
+            tools:text="strange hist">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

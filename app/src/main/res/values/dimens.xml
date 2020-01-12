@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="xl">24dp</dimen>
+    <dimen name="xs">2dp</dimen>
+    <dimen name="action_bar">36dp</dimen>
+
+</resources>

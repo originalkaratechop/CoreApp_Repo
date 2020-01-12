@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">CoreApp</string>
+
+    <string name="view_color1">Choose color 1</string>
+    <string name="view_color2">Choose color 2</string>
+    <string name="view_cancelled">Cancelled</string>
+    <string name="view_changed">Color changed"</string>
+    <string name="view_out">Out of bounds</string>
+    <string name="view_load">Decoding… %1$d%%</string>
+
+    <string name="view_d0">dE</string>
+    <string name="view_r0">L:</string>
+    <string name="view_g0">a:</string>
+    <string name="view_b0">b:</string>
+    <string name="view_255">255</string>
+
+    <string name="tab0">CoreFrag</string>
+    <string name="tab1">HistFrag</string>
+
+    <string name="hist_rgb">Cmp</string>
+    <string name="hist_l">L*</string>
+
+    <string name="hist_switch_comp">Comp</string>
+    <string name="hist_switch_cut">Cut</string>
+    <string name="hist_switch_upd">Upd</string>
+    <string name="hist_switch_redraw">RE</string>
+    <string name="hist_check_de">DE</string>
+    <string name="on">on</string>
+
+    <string name="menu_load">Load image</string>
+
+</resources>
